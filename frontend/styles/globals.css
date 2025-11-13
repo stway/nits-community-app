@@ -1,0 +1,41 @@
+:root{
+  --bg:#0f172a;
+  --card:rgba(255,255,255,0.04);
+  --muted:#9ca3af;
+  --text:#e6e6e6;
+  --accent1:#6366f1;
+  --accent2:#06b6d4;
+}
+@media (prefers-color-scheme: light) {
+  :root{
+    --bg:#f8fafc;
+    --card:rgba(2,6,23,0.04);
+    --muted:#374151;
+    --text:#111827;
+    --accent1:#4f46e5;
+    --accent2:#06b6d4;
+  }
+}
+html,body,#__next{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto;}
+body{background:linear-gradient(180deg,#0f172a 0%, #111827 100%);color:var(--text);-webkit-font-smoothing:antialiased;}
+.container{max-width:1000px;margin:20px auto;padding:14px;}
+.header{display:flex;justify-content:space-between;align-items:center;gap:12px;}
+.nav-left{display:flex;align-items:center;gap:12px;}
+.logo{width:56px;height:56px;border-radius:10px;object-fit:cover;}
+.search{padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.03);color:var(--text);min-width:220px;}
+.card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;}
+.btn{padding:8px 12px;border-radius:12px;background:linear-gradient(90deg,var(--accent1),var(--accent2));border:none;color:white;cursor:pointer;}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:20px;background:#fff;color:#000;padding:8px 12px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.12);}
+.post-img{width:100%;border-radius:10px;object-fit:cover;}
+.section-hero{height:220px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;margin-bottom:12px;backdrop-filter:blur(6px);}
+.nav-links{display:flex;gap:8px;align-items:center;}
+.user-avatar{width:44px;height:44px;border-radius:10px;object-fit:cover;}
+.footer{margin-top:30px;text-align:center;color:var(--muted);font-size:13px;}
+textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);border-radius:8px;padding:8px;}
+input[type="file"]{color:var(--text);}
+@media (max-width:720px){
+  .search{min-width:120px;}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));}
+  .section-hero{height:160px;}
+}
